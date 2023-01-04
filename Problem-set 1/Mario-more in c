@@ -1,0 +1,48 @@
+#include <cs50.h>
+#include <stdio.h>
+
+
+
+int main(void) 
+{
+    // variables---
+    int h, i, d, k;
+    
+    
+    do
+    {
+        //getting the height from the user
+        h = get_int("Height :  ");
+    }
+    
+    while (h < 1 || h > 8);
+    
+    // making the piramid
+    for (i = 0; i < h; i++)
+    {   
+        for (d = 0; d < h - i - 1; d++)
+        {
+            // printing the spaces for the pyramid
+            printf(" ");
+        }
+        
+        for (k = 0; k <= i; k++)
+        {
+            // printing the bricks of the pyramid
+            printf("#");
+        }
+        
+        // yes we need this space too -__-
+        printf("  ");
+        
+        for (k = 0; k <= i; k++)
+        {
+            // printing the bricks of the second pyramid. yes
+            printf("#");
+        }
+        
+        // you know what it is
+        printf("\n");
+    
+    }
+}
